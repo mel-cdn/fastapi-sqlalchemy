@@ -1,6 +1,5 @@
-from fastapi import FastAPI
-
 from controllers.client_router import client_router
+from fastapi import FastAPI
 
 app = FastAPI(
     root_path="/api",

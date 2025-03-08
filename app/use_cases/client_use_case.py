@@ -6,7 +6,6 @@ from repositories.main_repository import MainRepository
 
 
 class ClientUseCase:
-
     def __init__(self, repo: MainRepository):
         self.repo = repo
 

@@ -9,7 +9,7 @@ class ClientRepository(MainRepository):
         super().__init__()
         print("Initialized DynamoDB ClientRepository...")
 
-    def fetch(self, ) -> List[ClientOut]:
+    def fetch(self) -> List[ClientOut]:
         """This is just to demonstrate dependency injection. No actual data is being fetched.
         ClientRepository of pgsql vs dynamodb.
         """
