@@ -14,4 +14,8 @@ class ClientRepository(MainRepository):
         ClientRepository of pgsql vs dynamodb.
         """
         print("Retrieving clients from DynamoDB...")
-        return [ClientOut(**{"firstName": "John", "lastName": "Doe"})]
+        raise NotImplementedError
+
+    def create(self) -> ClientOut:
+        print("Creating client in DynamoDB...")
+        return ClientOut(**{"firstName": "Maximo", "lastName": "Dynamo Jr."})

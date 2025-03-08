@@ -16,3 +16,7 @@ class ClientRepository(MainRepository, PGSQLRepository):
         with self.session() as session:
             clients = session.query(Client).all()
         return [ClientOut(**client.camel_cased_dict) for client in clients]
+
+    def create(self) -> ClientOut:
+        print("Creating clients from PostgresSQL...")
+        raise NotImplementedError

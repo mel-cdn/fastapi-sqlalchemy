@@ -9,7 +9,7 @@ from use_cases.client_use_case import ClientUseCase
 
 
 def get_client_use_case(request: Request) -> ClientUseCase:
-    if request.method == "GET" and request.url.path.split("/")[-1] == "clients/":
+    if request.method == "GET" and request.url.path.split("/")[-1] == "clients":
         # If GET /clients use PostgresSQL
         return ClientUseCase(repo=PostgresClientRepository())
     else:

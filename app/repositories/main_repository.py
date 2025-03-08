@@ -13,3 +13,7 @@ class MainRepository(ABC):
     @abstractmethod
     def fetch(self, **kwargs):
         """Retrieve data from the database."""
+
+    @abstractmethod
+    def create(self, **kwargs):
+        """Create data in the database."""

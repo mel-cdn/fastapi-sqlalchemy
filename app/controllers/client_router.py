@@ -14,4 +14,14 @@ client_router = APIRouter()
     description="Retrieve all clients.",
 )
 async def retrieve_clients(client_use_case: ClientUseCase = Depends(get_client_use_case)):
-    return client_use_case.fetch_data()
+    return client_use_case.fetch_entries()
+
+
+@client_router.post(
+    "",
+    response_model=ClientOut,
+    summary="Create Clients",
+    description="Create new clients.",
+)
+async def create_client(client_use_case: ClientUseCase = Depends(get_client_use_case)):
+    return client_use_case.create_entry()
