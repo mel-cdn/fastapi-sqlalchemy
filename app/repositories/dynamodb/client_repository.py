@@ -10,12 +10,10 @@ class ClientRepository(MainRepository):
         print("Initialized DynamoDB ClientRepository...")
 
     def fetch(self) -> List[ClientOut]:
-        """This is just to demonstrate dependency injection. No actual data is being fetched.
-        ClientRepository of pgsql vs dynamodb.
-        """
         print("Retrieving clients from DynamoDB...")
         raise NotImplementedError
 
     def create(self) -> ClientOut:
+        """Mocked create. No actual data is being created."""
         print("Creating client in DynamoDB...")
         return ClientOut(**{"firstName": "Maximo", "lastName": "Dynamo Jr."})
