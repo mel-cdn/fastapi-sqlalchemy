@@ -1,6 +1,5 @@
-from sqlalchemy.orm import Mapped, mapped_column
-
 from models.database.pgsql.core import CoreModel
+from sqlalchemy.orm import Mapped, mapped_column
 
 
 class Client(CoreModel):
@@ -10,10 +9,10 @@ class Client(CoreModel):
     FirstName: Mapped[str]
     LastName: Mapped[str]
 
-
+    @property
     def camel_cased_dict(self) -> dict:
         return {
             "id": self.Id,
             "firstName": self.FirstName,
-            "lastName": self.LastName
+            "lastName": self.LastName,
         }
