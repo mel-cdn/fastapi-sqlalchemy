@@ -46,7 +46,7 @@ $ ./run-local-service
 $ curl -X GET http://127.0.0.1:9000/api/clients
 
 [
-  {"firstName":"Postgres", "Ultimatum":"Doe"}
+  {"firstName":"Postgres", "lastName":"Ultimatum"}
 ]
 
 # [POST] Create client transactions should be against DynamoDB (mocked)
