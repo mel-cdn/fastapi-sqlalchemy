@@ -10,12 +10,13 @@ class Client(CoreModel):
     Id: Mapped[int] = mapped_column(primary_key=True)
     FirstName: Mapped[str]
     LastName: Mapped[str]
-    
+
     @property
     def camel_cased_dict(self) -> dict:
         return {
             "id": self.Id,
             "firstName": self.FirstName,
             "lastName": self.LastName,
+            "fullName": f"{self.FirstName} {self.LastName}",
             "age": 12
         }
