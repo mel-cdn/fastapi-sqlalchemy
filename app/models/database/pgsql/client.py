@@ -3,12 +3,14 @@ from sqlalchemy.orm import Mapped, mapped_column
 
 
 class Client(CoreModel):
+    """Client model"""
+    
     __tablename__ = "Clients"
 
     Id: Mapped[int] = mapped_column(primary_key=True)
     FirstName: Mapped[str]
     LastName: Mapped[str]
-
+    
     @property
     def camel_cased_dict(self) -> dict:
         return {
