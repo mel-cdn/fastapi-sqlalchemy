@@ -1,10 +1,11 @@
-from models.database.pgsql.core import CoreModel
 from sqlalchemy.orm import Mapped, mapped_column
+
+from models.database.pgsql.core import CoreModel
 
 
 class Client(CoreModel):
     """Client Model"""
-    
+
     __tablename__ = "Clients"
 
     Id: Mapped[int] = mapped_column(primary_key=True)
