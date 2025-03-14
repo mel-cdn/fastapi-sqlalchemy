@@ -15,4 +15,5 @@ class Client(CoreModel):
             "id": self.Id,
             "firstName": self.FirstName,
             "lastName": self.LastName,
+            "age": 12,
         }
